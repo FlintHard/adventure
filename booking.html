@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ тура - AdventureGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">AdventureGuide</a>
+        </div>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="tours.html" class="nav__link">Туры</a></li>
+                <li class="nav__item"><a href="booking.html" class="nav__link nav__link--active">Заказ тура</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="faq.html" class="nav__link">FAQ</a></li>
+            </ul>
+        </nav>
+        <button class="header__burger" id="burger-btn">
+            <span class="burger-icon"></span>
+        </button>
+    </header>
+
+    <main class="main">
+        <section class="booking">
+            <h1 class="booking__title">Заказ тура</h1>
+            <blockquote class="booking__quote">
+                "Если вы думаете, что приключения опасны, попробуйте рутину - она смертельна..." - Паоло Коэльо
+            </blockquote><br>
+
+            <form class="booking__form" novalidate>
+                <div class="booking__form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="booking__form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="booking__form-group">
+                    <label for="tour">Выберите тур</label>
+                    <select id="tour" name="tour" required>
+                        <option value="Экзотический тур">Экзотический тур</option>
+                        <option value="Экстремальный тур">Экстремальный тур</option>
+                        <option value="Гастрономический тур">Гастрономический тур</option>
+                    </select>
+                </div>
+                <button type="submit" class="button button--primary">Отправить заказ</button>
+            </form>
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copy">© 2024 AdventureGuide. Все права защищены.</p>
+    </footer>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

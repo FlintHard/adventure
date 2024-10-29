@@ -1,0 +1,425 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.header__logo a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none; /* отклчение маркирования списка */
+    gap: 15px;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header__burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger-icon {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    .header__nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    .header__nav--active {
+        display: flex;
+    }
+}
+
+.button--primary {
+    background-color: #ff5500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Подвал */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Общие стили для всех устройств */
+.tours__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Для экранов до 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tours__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+    }
+}
+
+/* Для экранов до 480px (мобильные телефоны) */
+@media (max-width: 480px) {
+    .tour-card__title {
+        font-size: 1.4rem;
+    }
+
+    .tour-card__desc {
+        font-size: 1rem;
+    }
+
+    .tour-card__button-container {
+        text-align: center;
+    }
+}
+
+
+/* Каталог туров */
+.tours {
+    padding: 20px;
+}
+
+.tours__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.tours__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tour-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tour-card__img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.tour-card__title {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .tour-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Форма заказа тура */
+.booking {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.booking__quote {
+    margin-top: 20px;
+    font-style: italic;
+    background-color: #ebeff1;
+    padding: 10px;
+    border-left: 5px solid #95cbef;
+    text-align: center;
+  }
+
+.booking__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking__form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking__form-group label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.booking__form-group input,
+.booking__form-group select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Страница отзывов */
+.reviews {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reviews__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.reviews__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.reviews__form-title {
+    font-size: 24px;
+    text-align: center;
+}
+
+.reviews__form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews__form-group label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.reviews__form-group input,
+.reviews__form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reviews__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reviews__item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviews__item-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.reviews__item-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Страница контактов */
+.contact {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact__desc,
+.contact__info {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact__map {
+    text-align: center;
+}
+
+.contact__map-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact__map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Страница About */
+.about {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about__desc {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about__subtitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about__mission, .about__team {
+    margin-bottom: 40px;
+}
+
+.about__text {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about__team-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about__team-member {
+    text-align: center;
+    flex: 1 1 calc(50% - 20px);
+}
+
+.about__team-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.about__team-name {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.about__team-role {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Страница FAQ */
+.faq {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq__item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq__question {
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq__answer {
+    display: none;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+/* Когда элемент .faq__item получает класс active, его ответ становится видимым (display: block) */
+.faq__item.active .faq__answer {
+    display: block;
+}
+

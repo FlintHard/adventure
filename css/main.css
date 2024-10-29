@@ -1,0 +1,154 @@
+.hero {
+    position: relative;
+    height: 80vh; /* Высота секции - вся высота экрана */
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(47, 3, 243, 0.7);
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero__list li {
+    margin-bottom: 0.5rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* затемнение */
+    z-index: 0;
+}
+
+/* Общие стили для всех экранов */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+.button--primary {
+    background-color: #ff6200;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Мобильные устройства (до 600px) */
+@media (max-width: 600px) {
+    .hero__title {
+        font-size: 1.8rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+
+    .hero__list {
+        font-size: 0.9rem;
+    }
+
+    .header__nav ul {
+        display: none; /* Прячем меню на мобильных */
+    }
+
+    .header__burger {
+        display: block; /* Показываем бургер-меню */
+    }
+}
+
+/* Планшеты (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero__title {
+        font-size: 2.2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero__list {
+        font-size: 1rem;
+    }
+}
+
+/* Большие экраны (от 1025px и выше) */
+@media (min-width: 1025px) {
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.4rem;
+    }
+
+    .hero__list {
+        font-size: 1.2rem;
+    }
+
+    .header__nav ul {
+        display: flex; /* Показываем горизонтальное меню */
+        justify-content: center;
+    }
+
+    .header__burger {
+        display: none; /* Прячем бургер-меню на больших экранах */
+    }
+}

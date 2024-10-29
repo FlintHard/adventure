@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - AdventureGuide</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">AdventureGuide</a>
+        </div>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="tours.html" class="nav__link">Туры</a></li>
+                <li class="nav__item"><a href="booking.html" class="nav__link">Заказ тура</a></li>
+                <li class="nav__item"><a href="reviews.html" class="nav__link nav__link--active">Отзывы</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="faq.html" class="nav__link">FAQ</a></li>
+            </ul>
+        </nav>
+        <button class="header__burger" id="burger-btn">
+            <span class="burger-icon"></span>
+        </button>
+    </header>
+
+    <main class="main">
+        <section class="about">
+            <h1 class="about__title">О нас</h1>
+            <p class="about__desc">AdventureGuide — это команда опытных специалистов, которые более 10 лет организуют уникальные и запоминающиеся туры по всему миру. Мы стремимся предоставить нашим клиентам незабываемые впечатления и возможность исследовать новые места.</p>
+            
+            <div class="about__mission">
+                <h2 class="about__subtitle">Наша миссия</h2>
+                <p class="about__text">Мы верим, что каждый человек заслуживает возможности открыть для себя что-то новое. Наши туры рассчитаны на тех, кто ищет приключений, уникального культурного опыта или просто хочет попробовать что-то необычное. Ведь каждое путешествие — это не просто место на карте, а новый взгляд на жизнь.</p>
+            </div>
+
+            <div class="about__team">
+                <h2 class="about__subtitle">Наша команда</h2>
+                <div class="about__team-grid">
+                    <div class="about__team-member">
+                        <img src="img/team1.jpg" alt="Гид Ивин Виктор" class="about__team-photo">
+                        <h3 class="about__team-name">Ивин Виктор</h3>
+                        <p class="about__team-role">Основатель и главный эксперт по экстремальным турам</p>
+                    </div>
+                    <div class="about__team-member">
+                        <img src="img/team2.jpg" alt="Гид Наталья Ходоренко" class="about__team-photo">
+                        <h3 class="about__team-name">Наталья Ходоренко</h3>
+                        <p class="about__team-role">Эксперт по экзотическим и гастрономическим турам</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copy">© 2024 AdventureGuide. Все права защищены.</p>
+    </footer>
+</body>
+</html>
