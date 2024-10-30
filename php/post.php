@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST['username']);
     $comment = trim($_POST['comment']);
 
-    // Проверка на корректность данных
+    // Проверка на корректность всех данных
     if (empty($username) || empty($comment)) {
         die(json_encode(['error' => 'Все поля обязательны для заполнения.']));
     }
@@ -32,8 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':comment' => $comment
         ]);
 
-        // Получение всех отзывов из базы данных
-        $sqlSelect = "SELECT * FROM reviews ORDER BY id DESC"; // Измените ORDER BY на нужное поле
+        // Получение всех имеющихся отзывов из базы данных
+        $sqlSelect = "SELECT * FROM reviews ORDER BY id DESC"; // При неорбходимости, изменить ORDER BY на нужное поле
         $stmtSelect = $pdo->prepare($sqlSelect);
         $stmtSelect->execute();
         $reviews = $stmtSelect->fetchAll(PDO::FETCH_ASSOC);

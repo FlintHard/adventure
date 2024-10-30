@@ -12,7 +12,7 @@ try {
 }
 
 // Получение всех отзывов из базы данных
-$sql = "SELECT username, comment FROM reviews ORDER BY id DESC"; // Сортировка по id, чтобы новые отзывы отображались первыми
+$sql = "SELECT username, comment FROM reviews ORDER BY id DESC"; // Сортировка по id, чтобы новые отзывы отображались в списке первыми
 $stmt = $pdo->query($sql);
 $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

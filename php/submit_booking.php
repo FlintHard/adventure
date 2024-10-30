@@ -4,7 +4,7 @@ $dsn = "mysql:host=localhost;dbname=adventure_guide;charset=utf8";
 $username = "root";
 $password = "";
 
-// Создаем соединение
+// Создаем соединение с БД
 try {
     $conn = new PDO($dsn, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

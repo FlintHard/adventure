@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    height: 80vh; /* Высота секции - вся высота экрана */
+    height: 80vh; /* Высота секции во всю высоту экрана */
     display: flex;
     justify-content: center; /* Выравнивание по горизонтали */
     align-items: center; /* Выравнивание по вертикали */
@@ -12,7 +12,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/background.jpg');
+    background-image: url('../img/background.jpg'); /* Фоновая картинка */
     background-size: cover;
     background-position: center;
     filter: blur(10px);
