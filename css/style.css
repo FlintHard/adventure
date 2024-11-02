@@ -10,6 +10,18 @@ body {
     color: #333;
 }
 
+/* Общий контейнер страницы */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Основной контент должен занимать всё доступное пространство */
+.main {
+    flex: 1;
+}
+
 /* Шапка сайта */
 .header {
     display: flex;
